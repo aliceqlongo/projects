@@ -1,0 +1,285 @@
+# play rock paper scissors with the computer!
+import random
+# variables
+computer = 0
+player = 0
+player_score = 0
+computer_score = 0
+play_again = "no"
+
+# instructions
+print("Welcome to rock paper scissors!")
+print(
+    "To play, choose one of the following by inputting "
+    "the corresponding number:"
+)
+print("1. Rock")
+print("2. Paper")
+print("3. Scissors")
+
+# game
+player = int(input("Which would you like to play? "))
+computer = random.randint(1, 4)
+
+if player == 1:
+    if computer == 1:
+        print("You played rock!\n")
+        print("The computer played rock!\n")
+        print("You tied!")
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+    if computer == 2:
+        print("You played rock!\n")
+        print("The computer played paper!\n")
+        print("You lost!")
+        computer_score = computer_score + 1
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+    else:
+        print("You played rock!\n")
+        print("The computer played scissors!\n")
+        print("You won!")
+        player_score = player_score + 1
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+elif player == 2:
+    if computer == 1:
+        print("You played paper!\n")
+        print("The computer played rock!\n")
+        print("You won!")
+        player_score = player_score + 1
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+    if computer == 2:
+        print("You played paper!\n")
+        print("The computer played paper!\n")
+        print("You tied!")
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+    else:
+        print("You played paper!\n")
+        print("The computer played scissors!\n")
+        print("You lost!")
+        computer_score = computer_score + 1
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+elif player == 3:
+    if computer == 1:
+        print("You played scissors!\n")
+        print("The computer played rock!\n")
+        print("You lost!")
+        computer_score = computer_score + 1
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+    if computer == 2:
+        print("You played scissors!\n")
+        print("The computer played paper!\n")
+        print("You won!")
+        player_score = player_score+1
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+    else:
+        print("You played scissors!\n")
+        print("The computer played scissors!\n")
+        print("You tied!")
+        print("Your score is ", player_score,
+              " and your opponent's is ", computer_score)
+        if player_score > computer_score:
+            print("You are winning!")
+        elif player_score == computer_score:
+            print("You are tied!")
+        else:
+            print("You are losing!")
+
+# to keep the game going
+play_again = input("Do you want to play again? (yes/no): ")
+
+
+while play_again.lower() == "yes":
+    # resetting variables
+    computer = 0
+    player = 0
+    play_again = "no"
+    print(
+        "\nTo play, choose one of the following by inputting "
+        "the corresponding number:"
+    )
+    print("1. Rock")
+    print("2. Paper")
+    print("3. Scissors")
+    player = int(input("Which would you like to play? "))
+    computer = random.randint(1, 4)
+    if player == 1:
+        if computer == 1:
+            print("You played rock!\n")
+            print("The computer played rock!\n")
+            print("You tied!")
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+        if computer == 2:
+            print("You played rock!\n")
+            print("The computer played paper!\n")
+            print("You lost!")
+            computer_score = computer_score + 1
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+        else:
+            print("You played rock!\n")
+            print("The computer played scissors!\n")
+            print("You won!")
+            player_score = player_score + 1
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+        play_again = input("Do you want to play again? (yes/no): ")
+    elif player == 2:
+        if computer == 1:
+            print("You played paper!\n")
+            print("The computer played rock!\n")
+            print("You won!")
+            player_score = player_score + 1
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+        if computer == 2:
+            print("You played paper!\n")
+            print("The computer played paper!\n")
+            print("You tied!")
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+        else:
+            print("You played paper!\n")
+            print("The computer played scissors!\n")
+            print("You lost!")
+            computer_score = computer_score + 1
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+    elif player == 3:
+        if computer == 1:
+            print("You played scissors!\n")
+            print("The computer played rock!\n")
+            print("You lost!")
+            computer_score = computer_score + 1
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+        if computer == 2:
+            print("You played scissors!\n")
+            print("The computer played paper!\n")
+            print("You won!")
+            player_score = player_score+1
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
+        else:
+            print("You played scissors!\n")
+            print("The computer played scissors!\n")
+            print("You tied!")
+            print("Your score is ", player_score,
+                  " and your opponent's is ", computer_score)
+            if player_score > computer_score:
+                print("You are winning!")
+            elif player_score == computer_score:
+                print("You are tied!")
+            else:
+                print("You are losing!")
+            play_again = input("Do you want to play again? (yes/no): ")
