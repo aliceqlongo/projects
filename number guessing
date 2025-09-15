@@ -1,0 +1,73 @@
+# guess the number game practice!
+import random
+print("\nWelcome to the number guessing game!")
+print("Choose your game mode:")
+print("\n1. Easy (Unlimited Guesses)")
+print("2. Medium (10 Guesses)")
+print("3. Hard (5 Guesses)")
+print("4. Impossible (3 Guesses)\n")
+
+level = int(input("Number of the level you'd like to play: "))
+number = random.randint(1, 101)
+guess = int(input("Guess: "))
+attempts = 0
+
+print("Input integers from 1-100 until you guess right!")
+print("Good luck!")
+
+if level == 1:
+    while guess != number:
+        if guess > number:
+            print("Too high, try again!")
+            guess = int(input("Guess:"))
+        elif guess < number:
+            print("Too low, try again!")
+            guess = int(input("Guess: "))
+    if guess == number:
+        print("Congratulations! You guessed the right number!")
+        quit
+elif level == 2:
+    while attempts < 9:
+        if guess > number:
+            print("Too high, try again!")
+            guess = int(input("Guess:"))
+            attempts = attempts + 1
+        elif guess < number:
+            print("Too low, try again!")
+            guess = int(input("Guess: "))
+            attempts = attempts + 1
+        elif guess == number:
+            print("Congratulations! You guessed the right number!")
+            quit
+        print("Better luck next time!")
+        quit
+elif level == 3:
+    while attempts < 4:
+        if guess > number:
+            print("Too high, try again!")
+            guess = int(input("Guess:"))
+            attempts = attempts + 1
+        elif guess < number:
+            print("Too low, try again!")
+            guess = int(input("Guess: "))
+            attempts = attempts + 1
+        elif guess == number:
+            print("Congratulations! You guessed the right number!")
+            quit
+        print("Better luck next time!")
+        quit
+elif level == 4:
+    while attempts < 2:
+        if guess > number:
+            print("Too high, try again!")
+            guess = int(input("Guess:"))
+            attempts = attempts + 1
+        elif guess < number:
+            print("Too low, try again!")
+            guess = int(input("Guess: "))
+            attempts = attempts + 1
+        elif guess == number:
+            print("Congratulations! You guessed the right number!")
+            quit
+        print("Better luck next time!")
+        quit
